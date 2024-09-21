@@ -13,5 +13,7 @@ def main():
     desk.slots[x][y].open()
     open_around(desk, x,y)
     print_desk(desk)
+    # сразу открытое поле (чекнуть генерацию)
+    # print_desk_opened(desk)
 
 main()
