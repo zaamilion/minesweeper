@@ -24,21 +24,20 @@ def main():
         y = step[1]
         desk.slots[x][y].open()
         if desk.slots[x][y].bomb is True:
-            print('ю луз бомб хере')
+            print("ю луз бомб хере")
             print_desk_opened(desk)
             game = False
             break
         open_around(desk, x, y)
         print_desk(desk)
         all_slots = list(itertools.chain.from_iterable(desk.slots))
-        if all_slots.count('  ') == real_quantity:
-            print('Ты выиграаал')
+        if all_slots.count("  ") == real_quantity:
+            print("Ты выиграаал")
             print_desk_opened(desk)
             game = False
 
 
-
-print('Игра закончена')
+print("Игра закончена")
 
 
 main()
